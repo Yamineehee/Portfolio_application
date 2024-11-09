@@ -1,0 +1,333 @@
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-side img {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .right-side {
+    margin-left: 0;
+  }
+
+  .project-card, .experience-card {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card img, .experience-card img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 150px;
+    margin: 0 0 15px 0;
+  }
+}
+
+.nav-buttons button:hover, .social-links img:hover {
+  transform: scale(1.05);
+  background-color: #ff1a6b; /* for buttons */
+}
+/*--------------------------------------------------*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #d1d2e2;
+  background-color: #0e0f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100vw; /* Cover full width */
+  background: url('../images/background-pattern.jpg') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero .highlight {
+  color: #3db8ff;
+}
+
+.hero .typing {
+  font-size: 1.5rem;
+  color: #00e6ac;
+  margin-top: 10px;
+}
+
+.hero .scroll-down {
+  margin-top: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+/* Bouncing Scroll Down */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  background-color: rgba(14, 15, 31, 0.9); /* Semi-transparent dark background */
+  border-radius: 10px;
+}
+
+/* Adjusted for Center Alignment */
+.content-wrapper.centered {
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.left-side img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+/* Right Side Text */
+.right-side {
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+.right-side h2 {
+  font-size: 2rem;
+  color: #3db8ff;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  font-size: 1.2rem;
+  color: #d1d2e2;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  background-color: rgba(61, 184, 255, 0.3); /* Semi-transparent button background */
+  color: #ffffff;
+  border: 1px solid #3db8ff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(61, 184, 255, 0.6);
+  box-shadow: 0px 0px 8px rgba(0, 230, 172, 0.7);
+}
+
+/* Projects and Experience Cards */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.project-card, .experience-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(20, 22, 44, 0.85); /* Semi-transparent dark background */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  width: calc(33% - 40px);
+}
+
+.project-card img, .experience-card img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+  opacity: 0.85;
+}
+
+.project-card:hover, .experience-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-details h2, .experience-details h2 {
+  color: #00e6ac;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #3db8ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Skills Page List Styling */
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.skills-list li {
+  background: rgba(61, 184, 255, 0.1); /* Light transparency background */
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  color: #d1d2e2;
+}
+
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  width: 100%;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-card, .experience-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-buttons {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* About Me Page Background */
+.about-wrapper {
+  background-color: rgba(14, 15, 31, 0.9); /* Semi-transparent dark background */
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  color: #d1d2e2;
+}
+
+.about-wrapper h2 {
+  font-size: 2rem;
+  color: #3db8ff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-wrapper p {
+  font-size: 1.2rem;
+  color: #d1d2e2;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.about-wrapper img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-me {
+  margin-bottom: 30px; /* Adds space after About Me section */
+}
+
+.skills {
+  margin-top: 30px; /* Adds space before Skills section */
+}
+
+.about-me img {
+  width: 120px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
